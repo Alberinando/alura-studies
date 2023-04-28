@@ -6,7 +6,7 @@ import Cronometro from '../components/Cronomentro';
 import { ITarefa } from '../types/tarefa';
 
 function App() {
-  const [tarefa, setTarefa] = useState<ITarefa[] | []>([]);
+  const [tarefa, setTarefa] = useState< ITarefa[] | []>([]);
   const [selecionado, setSelecionando] = useState<ITarefa>();
 
   function selecionaTarefa(tarefaSelecionada: ITarefa) {
@@ -33,7 +33,7 @@ function App() {
   }
   return (
     <div className={style.AppStyle}>
-      <Formulario setTarefa={setTarefa}/>
+      <Formulario setTarefas={setTarefa}/>
       <Lista
         tarefa={tarefa}
         selecionaTarefa={selecionaTarefa}
